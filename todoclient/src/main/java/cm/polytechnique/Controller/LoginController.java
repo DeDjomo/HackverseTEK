@@ -132,8 +132,8 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         create_pane.setVisible(false);
         already_pane.setVisible(true);
-        fond.setImage(new Image("fond3.jpg"));
-        logo1.setImage(new Image("logo.png"));
-        logo2.setImage(new Image("logo.png"));
+        fond.setImage(new Image("photos/fond3.jpg"));
+        logo1.setImage(new Image("photos/logo.png"));
+        logo2.setImage(new Image("photos/logo.png"));
     }
 }
