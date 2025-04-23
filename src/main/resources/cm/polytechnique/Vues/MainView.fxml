@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cm.polytechnique.Controller.Maincontroller">
+   <content>
+      <StackPane prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <ImageView fx:id="fond" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" />
+            <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
+               <children>
+                  <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" height="850.0" layoutX="175.0" layoutY="90.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" translateY="10.0" width="1500.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.26174496644295303">
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5866344737272876">
+                                 <color>
+                                    <Color red="0.5394737124443054" green="0.16983430087566376" blue="0.5209917426109314" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8589171713864788">
+                                 <color>
+                                    <Color red="0.9210526347160339" blue="0.875" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <BorderPane layoutX="175.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" translateY="10.0">
+                     <center>
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="740.0" prefWidth="1440.0" styleClass="viewport" stylesheets="@../Styles.css">
+                                 <children>
+                                    <AnchorPane fx:id="anchor1" prefHeight="740.0" prefWidth="356.0" style="-fx-background-color: #910091; -fx-background-radius: 50;">
+                                       <children>
+                                          <Label alignment="CENTER" focusTraversable="false" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="325.0" style="-fx-background-radius: 50; -fx-background-color: black;" text="Task" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane hbarPolicy="NEVER" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="356.0" styleClass="scrollpane" stylesheets="@../Styles.css" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox fx:id="vboxTask" prefWidth="356.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <Label fx:id="labelAdd" focusTraversable="false" layoutX="230.0" layoutY="650.0" onMouseClicked="#onClickedAdd" prefHeight="60.0" prefWidth="60.0">
+                                             <graphic>
+                                                <ImageView fx:id="add" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../photos/add.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label fx:id="labelSort1" focusTraversable="false" layoutX="298.0" layoutY="650.0" onMouseClicked="#onClickedSort1" prefHeight="60.0" prefWidth="60.0">
+                                             <graphic>
+                                                <ImageView fx:id="sort1" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../photos/sort.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="anchor2" layoutX="360.0" prefHeight="740.0" prefWidth="356.0" style="-fx-background-color: #910091; -fx-background-radius: 50;">
+                                       <children>
+                                          <Label alignment="CENTER" focusTraversable="false" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="325.0" style="-fx-background-radius: 50; -fx-background-color: black;" text="Running" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane hbarPolicy="NEVER" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="356.0" styleClass="scrollpane" stylesheets="@../Styles.css" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox fx:id="vboxRunning" prefWidth="356.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <Label fx:id="labelSort2" focusTraversable="false" layoutX="298.0" layoutY="650.0" onMouseClicked="#onClickedSort2" prefHeight="60.0" prefWidth="60.0">
+                                             <graphic>
+                                                <ImageView fx:id="sort2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../photos/sort.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="anchor3" layoutX="720.0" prefHeight="740.0" prefWidth="356.0" style="-fx-background-color: #910091; -fx-background-radius: 50;">
+                                       <children>
+                                          <Label alignment="CENTER" focusTraversable="false" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="325.0" style="-fx-background-radius: 50; -fx-background-color: black;" text="Finish" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane hbarPolicy="NEVER" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="356.0" styleClass="scrollpane" stylesheets="@../Styles.css" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox fx:id="vboxFinish" prefWidth="356.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <Label fx:id="labelSort3" focusTraversable="false" layoutX="298.0" layoutY="650.0" onMouseClicked="#onClickedSort3" prefHeight="60.0" prefWidth="60.0">
+                                             <graphic>
+                                                <ImageView fx:id="sort3" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../photos/sort.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="anchor4" layoutX="1080.0" prefHeight="740.0" prefWidth="356.0" style="-fx-background-color: #910091; -fx-background-radius: 50;">
+                                       <children>
+                                          <Label alignment="CENTER" focusTraversable="false" layoutX="16.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="325.0" style="-fx-background-radius: 50; -fx-background-color: black;" text="Not Complete" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane hbarPolicy="NEVER" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="356.0" styleClass="scrollpane" stylesheets="@../Styles.css" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox fx:id="vboxNotComplete" prefWidth="356.0" />
+                                             </content>
+                                          </ScrollPane>
+                                          <Label fx:id="labelSort4" focusTraversable="false" layoutX="298.0" layoutY="650.0" onMouseClicked="#onClickedSort4" prefHeight="60.0" prefWidth="60.0">
+                                             <graphic>
+                                                <ImageView fx:id="sort4" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../photos/sort.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </center>
+                     <top>
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1500.0" />
+                           </children>
+                        </StackPane>
+                     </top>
+                     <left>
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="60.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="60.0">
+                                 <children>
+                                    <Label fx:id="labelSearch" focusTraversable="false" layoutY="39.0" onMouseClicked="#onClickedSearch" prefHeight="60.0" prefWidth="60.0">
+                                       <graphic>
+                                          <ImageView fx:id="search" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../photos/search.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="labelAddProject" focusTraversable="false" layoutX="6.0" layoutY="132.0" onMouseClicked="#onClickedAddProject" prefHeight="60.0" prefWidth="60.0">
+                                       <graphic>
+                                          <ImageView fx:id="addProject" fitHeight="39.0" fitWidth="47.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../../../photos/addProject.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="labelTeam" focusTraversable="false" layoutX="6.0" layoutY="195.0" onMouseClicked="#onClickedTeam" prefHeight="60.0" prefWidth="60.0">
+                                       <graphic>
+                                          <ImageView fx:id="team" fitHeight="56.0" fitWidth="47.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../../../photos/addTeam.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <Label fx:id="labelSetting" focusTraversable="false" layoutY="650.0" onMouseClicked="#onClickedSetting" prefHeight="60.0" prefWidth="60.0">
+                                       <graphic>
+                                          <ImageView fx:id="setting" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../photos/setting.png" />
+                                             </image>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </children>
+                        </StackPane>
+                     </left>
+                  </BorderPane>
+                  <ImageView fx:id="logo" fitHeight="120.0" fitWidth="160.0" layoutX="879.0" layoutY="116.0" pickOnBounds="true" translateY="-20.0">
+                     <image>
+                        <Image url="@../../../../../photos/logo.png" />
+                     </image>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </content>
+</ScrollPane>

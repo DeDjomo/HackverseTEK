@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cm.polytechnique.Controller.TaskProjectController">
+    <content>
+        <StackPane prefHeight="1000.0" prefWidth="1920.0">
+            <children>
+                <ImageView fx:id="fond" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true" />
+                <AnchorPane prefHeight="1000.0" prefWidth="1920.0">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="850.0" layoutX="175.0" layoutY="90.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="1500.0">
+                            <fill>
+                                <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.2652439024390244">
+                                            <color>
+                                                <Color />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.4969512195121951">
+                                            <color>
+                                                <Color red="0.5411764979362488" green="0.16862745583057404" blue="0.5215686559677124" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.6890243902439025">
+                                            <color>
+                                                <Color red="0.9215686321258545" blue="0.8745098114013672" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </fill>
+                        </Rectangle>
+                        <AnchorPane layoutX="175.0" layoutY="90.0" prefHeight="820.0" prefWidth="1500.0">
+                            <children>
+                                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1500.0">
+                                    <center>
+                                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <AnchorPane prefHeight="740.0" prefWidth="1440.0" styleClass="viewport" stylesheets="@../Styles.css">
+                                                    <children>
+                                                        <Label layoutX="100.0" layoutY="95.0" prefHeight="50.0" prefWidth="150.0" text="Task Name" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="100.0" layoutY="190.0" prefHeight="50.0" prefWidth="150.0" text="Description" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="100.0" layoutY="380.0" prefHeight="50.0" prefWidth="150.0" text="Priority" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="name" focusTraversable="false" layoutX="378.0" layoutY="95.0" prefHeight="50.0" prefWidth="1000.0" promptText="Enter a name here">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </TextField>
+                                                        <TextArea fx:id="descrription" focusTraversable="false" layoutX="378.0" layoutY="190.0" prefHeight="150.0" prefWidth="1000.0" promptText="Enter description here" wrapText="true">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </TextArea>
+                                                        <Button fx:id="cancel" layoutX="1072.0" layoutY="665.0" mnemonicParsing="false" onAction="#onActionCancel" prefHeight="50.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: RED;" text="CANCEL">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button fx:id="add" layoutX="1232.0" layoutY="665.0" mnemonicParsing="false" onAction="#onActionAdd" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: LIGHTGREEN;" text="ADD">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Label alignment="CENTER" prefHeight="75.0" prefWidth="1440.0" text="ADD A TASK" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="System Bold" size="40.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Spinner fx:id="priority" layoutX="378.0" layoutY="380.0" prefHeight="50.0" prefWidth="300.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </StackPane>
+                                    </center>
+                                    <top>
+                                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ImageView fx:id="logo" fitHeight="120.0" fitWidth="160.0" pickOnBounds="true">
+                                                    <image>
+                                                        <Image url="@../../../../../photos/logo.png" />
+                                                    </image>
+                                                    <effect>
+                                                        <Bloom />
+                                                    </effect>
+                                                </ImageView>
+                                            </children>
+                                        </StackPane>
+                                    </top>
+                                </BorderPane>
+                            </children></AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </content>
+</ScrollPane>
